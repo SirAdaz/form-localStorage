@@ -40,3 +40,16 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.form-group input:focus {
+    outline: none;
+}
+.form-group.error input {
+    border-color: var(--error-color);
+}
+.form-group.success input {
+    border-color: var(--success-color);
+}
+.form-group small {
+    color: var(--error-color);
+}
