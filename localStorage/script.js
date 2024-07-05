@@ -127,14 +127,22 @@ form.addEventListener('submit',function(e){
         e.preventDefault();
         alert("L'envoie a échoué")
     }else{
-        // locale
-        let usernameVal = document.getElementById("username").value;
-        let mailVal = document.getElementById("email").value;
 
-        //envoie dans le localStorage
-        localStorage.setItem("nom",usernameVal);
-        localStorage.setItem("mail",mailVal);
-        alert("Bravo l'envoie du formulaire a été effectué")
+    // locale
+    let usernameVal = document.getElementById("username").value;
+    let mailVal = document.getElementById("email").value;
+
+    //création de l'objet user
+    const user ={
+        nom : usernameVal,
+        mail : mailVal
+    }
+    //envoie dans le localStorage
+    dataUser = localStorage.setItem('datauser',JSON.stringify(user));
+    // //envoie dans le localStorage
+    // localStorage.setItem("nom",usernameVal);
+    // localStorage.setItem("mail",mailVal);
+    alert("Bravo l'envoie du formulaire a été effectué")
     }
 });
    
